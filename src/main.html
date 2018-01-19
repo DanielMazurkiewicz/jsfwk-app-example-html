@@ -1,0 +1,24 @@
+<script static>
+    const widgetExample = require('./widgetExample.html');
+</script>
+
+
+<div(main)>
+    <^widgetExample>
+        <@title>
+            First instance of widget
+        </@title>
+        <@content>
+            JS FWK npm repository:<a href="https://www.npmjs.com/package/jsfwk">LINK</a>
+        </@content>
+    </^widgetExample>
+
+    <^widgetExample showContent=false>
+        <@title>
+            Second instance of widget
+        </@title>
+        <@content>
+            This content will be hidden due to attribute showContent being set to false
+        </@content>
+    </^widgetExample>
+</div>

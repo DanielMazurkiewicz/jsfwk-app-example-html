@@ -1,0 +1,47 @@
+<style>
+    .widgetStyle {
+        margin: 5px;
+        padding: 5px;
+        width: 20%;
+        border: 1px solid darkblue;
+    }
+
+    .blueStyle {
+        color: blue;
+    }
+
+    .greenStyle {
+        color: green;
+    }
+</style>
+
+
+
+<div(main) class=widgetStyle>
+    <div(@title) class=blueStyle/>
+    <div(@content) class=greenStyle/>
+    <div>Counter value:
+        <text(counterElement)>0</text>
+    </div>
+    <div>
+        <button(btnPlusOne)>+1</button>
+    </div>
+</div>
+
+
+
+<script before>
+    let counter = 0;
+</script>
+
+<script(&click, btnPlusOne)>
+    counterElement.data = ++counter;
+</script>
+
+<script(=showContent) set visible>
+    content.style.display = value ? '' : 'none';
+</script>
+
+<script(=showContent) get>
+    return content.style.display;
+</script>
