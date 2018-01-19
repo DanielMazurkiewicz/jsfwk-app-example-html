@@ -17,3 +17,5 @@ npm run-script minify
 ```
 
 ##### Results are available in "./bin" directory
+[Working example](https://danielmazurkiewicz.github.io/jsfwk-app-example-html/bin/html/index.html)
+
